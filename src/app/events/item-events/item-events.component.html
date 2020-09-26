@@ -1,0 +1,10 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{events.descricao}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Organizador: {{events.organizador.nome +" "+ events.organizador.sobrenome}}</h6>
+        <p class="card-text">Inicio: {{dataInicio.getDate()}}/{{dataInicio.getMonth()}}/{{dataInicio.getFullYear()}} as {{dataInicio.getHours()}}:{{dataInicio.getMinutes()}}</p>
+        <p class="card-text">Fim: {{dataFim.getDate()}}/{{dataFim.getMonth()}}/{{dataFim.getFullYear()}} as {{dataFim.getHours()}}:{{dataFim.getMinutes()}}</p> 
+        <a (click)='remover()' class="card-link">Remover</a>
+        <a [routerLink]="['/editEvent']" [queryParams]="{id:events.id}" class="card-link">Editar</a>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="form-itens">
+    <h1>Novo Evento</h1>
+    <form [formGroup]="formEvents" (ngSubmit)="createEvents()">
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" class="form-control" placeholder="Descrição" formControlName="descricao">
+        </div>
+        <div class="form-group">
+            <label for="dt_inicio">Inicio</label>
+            <input type="datetime-local" class="form-control" id="dt_inicio" formControlName="data_inicio">
+        </div>
+        <div class="form-group">
+            <label for="dt_fim">Fim</label>
+            <input type="datetime-local" class="form-control" id="dt_fim" formControlName="data_fim">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Adicionar">
+    </form>
+</div>

@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="list-events">
+    <div class="list-itens">
+        <div *ngFor="let e of events" class="itens">
+            <app-item-events [events]="e"></app-item-events>
+        </div>
+    </div>
+</div>

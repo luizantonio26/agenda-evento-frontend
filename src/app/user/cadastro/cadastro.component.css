@@ -1,0 +1,11 @@
+.form-cadastro{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 600px;
+    padding: 20px;
+    margin: 10vh auto;
+}
+
+.form-cadastro h1{
+    text-align: center;
+}

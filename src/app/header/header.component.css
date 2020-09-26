@@ -1,0 +1,8 @@
+header a:hover{
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.nav-item{
+    margin: 10px;
+}
