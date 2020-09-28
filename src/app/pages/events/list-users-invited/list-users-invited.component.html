@@ -1,0 +1,26 @@
+<mat-tab-group mat-align-tabs="center" class="lusers">
+    <mat-tab label="Aceitos">
+        <div *ngFor="let a of acepted">
+            <div class="card">
+                <p class="card-text">Nome: {{a.user.nome}} {{a.user.sobrenome}}</p>
+                <p class="card-text">Email: {{a.user.email}}</p>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Recusados">
+        <div *ngFor="let r of refused">
+            <div class="card">
+                <p class="card-text">Nome: {{r.user.nome}} {{r.user.sobrenome}}</p>
+                <p class="card-text">Email: {{r.user.email}}</p>
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+<div class="form-div">
+    <form  [formGroup]="formConvite" (ngSubmit)="convidar()">
+        <div class="form-group">
+            <input type="email" placeholder="convidar" class="form-control" formControlName="email" id="email">
+        </div>
+        <button type="submit" class="btn btn-primary">Convidar</button>
+    </form>
+</div>

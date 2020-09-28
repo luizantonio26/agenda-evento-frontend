@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="list-events">
+    <mat-tab-group mat-align-tabs="center">
+        <mat-tab label="Próximos Eventos">
+            <div class="list-itens">
+                <div *ngFor="let e of events" class="itens">
+                    <app-item-events [events]="e"></app-item-events>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Convites">
+            <div class="list-itens">
+                <div *ngFor="let c of convites" class="itens">
+                    <app-item-events [convite]="c"></app-item-events>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>

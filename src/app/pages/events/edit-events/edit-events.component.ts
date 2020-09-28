@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EventsService } from '../events.service';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-edit-events',
@@ -32,8 +32,6 @@ export class EditEventsComponent implements OnInit {
         this.formEvents.setValue(data)
       }
     )
-
-    console.log(eventId)
   }
 
   editEvents(){
@@ -42,7 +40,6 @@ export class EditEventsComponent implements OnInit {
         this.router.navigate([""])
       },
       erro=>{
-        console.log(erro)
       }
     )
   }

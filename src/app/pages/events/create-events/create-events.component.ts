@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { User } from 'src/app/user/user.model';
-import { Events } from '../events.model';
-import { EventsService } from '../events.service';
+import { Events } from 'src/app/model/events.model';
+import { User } from 'src/app/model/user.model';
+import { EventsService } from 'src/app/services/events.service';
+
 
 @Component({
   selector: 'app-create-events',

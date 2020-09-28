@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../user/user.model';
-import { UserService } from '../user/user.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -17,7 +16,6 @@ export class HeaderComponent implements OnInit {
 
     this.userService.getUser(+userId).subscribe(
       data=>{
-        console.log(data)
         this.user = data
       }
     )

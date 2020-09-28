@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from '../user.model';
-import { UserService } from '../user.service';
+import { User } from 'src/app/model/user.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-cadastro',

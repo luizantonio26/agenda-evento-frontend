@@ -1,4 +1,4 @@
-import { User } from '../user/user.model'
+import { User } from './user.model'
 
 export class Events{
     id:number
@@ -6,5 +6,4 @@ export class Events{
     data_inicio: string
     data_fim: string
     organizador: User
-    convidados: User[]
 }
