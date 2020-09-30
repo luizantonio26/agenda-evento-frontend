@@ -40,7 +40,7 @@ export class ItemEventsComponent implements OnInit {
           if(conf){
             this.eventsService.delete(this.events).subscribe(
               data=>{
-                this.route.navigate([''])
+                window.location.reload()
               }, erro=>{
                 console.log(erro)
               }
@@ -62,6 +62,8 @@ export class ItemEventsComponent implements OnInit {
     }
     this.conviteService.confirmInvite(data).subscribe(
       data=>{
+        alert("Seu convite foi aceito com sucesso!")
+        window.location.reload()
       },
       erro=>{
       }
@@ -76,6 +78,7 @@ export class ItemEventsComponent implements OnInit {
     }
     this.conviteService.confirmInvite(data).subscribe(
       data=>{
+        alert("Seu convite foi recusado com sucesso!")
       },
       erro=>{
       }

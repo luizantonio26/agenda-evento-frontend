@@ -61,6 +61,7 @@ export class ListUsersInvitedComponent implements OnInit {
     this.conviteService.create({email, eventId}).subscribe(
       data=>{
         alert("convite para "+data.user.nome+" enviado com sucesso!")
+        this.formConvite.reset()
       },erro=>{
         alert(erro)
       }

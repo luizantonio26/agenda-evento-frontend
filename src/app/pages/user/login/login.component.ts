@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate([''])
       },
       erro=>{
-        alert("Usuario ou senha invalido "+ erro)
+        alert("Usuario ou senha invalido")
       }
     )
   }
