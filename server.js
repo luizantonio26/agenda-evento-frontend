@@ -1,12 +1,14 @@
-const express = require('express')
+const express = require('express');
 
-const app = express()
+const app = express();
+const appName = 'algular-material-schematics'
+const outputPath = `${__dirname}/dist/${appName}`;
 
-app
-    .listen(process.env.PORT || 3000, (err)=>{
-        if(err){
-            return console.log(err)
-        }else{
-            console.log('Tudo ok')
-        }
-    })
+app.use(express.static(outputPath));
+
+app.get('/*', (req, res)=>{
+    res.sendFile(`${outputPath}/index.html`)
+})
+
+app.listen(process.env.PORT);
+
